@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+    <meta charset="utf-8"/>
+    <br>
+    <h3>Registro de usuarios</h3>
+    <br>
+</head>
+
+<body>
+	<div class="modal-dialog text-center">
+		<div class="col-sm-8 main-section">
+			<div class="modal-content">
+				<div class="col-12 user-img">
+					<img src="https://www.freepngimg.com/thumb/facebook/62681-flat-icons-face-computer-design-avatar-icon-thumb.png">
+				</div><br>
+				<form class="col-12">
+					<div class="form">
+						<div class="grupo">
+							<label for="id_usr">Id Usuario :</label><br>
+							<input required="" type="text" name="id_usr" pattern="[0-9]+" placeholder="Id Usuario" maxlength="11">
+						</div>
+									
+						<div class="grupo">
+							<label for="nombre">Nombres :</label><br>
+							<input required="" placeholder="Nombre" type="text" name="nombre" maxlength="25">
+						</div>
+						<div class="grupo">
+							<label for="apellido">Apellidos :</label><br>
+							<input required="" placeholder="Apellido" type="text" name="apellido" maxlength="25">
+						</div>
+                        <div class="grupo">
+							<span>Tipo de documento :</span><br>
+							<select name="select">
+								<option value=""><p style="color: #9C9888";>Seleccione un tipo </p></option>
+								<option>001-Tarjeta de Identidad</option>
+								<option>002-Cédula de Ciudadanía</option>
+								<option>003-Cédula de Extranjería</option>
+							</select>
+						</div>
+						<div class="grupo">
+							<label for="Documento">Documento Usuario :</label><br>
+							<input required="" placeholder="Documento Usuario" type="text" name="Documento" maxlength="20">
+						</div>
+                        <div class="grupo">
+							<label for="Lugar de nacimiento">Lugar de residencia :</label><br>
+							<input placeholder="Lugar de residencia" type="text" name="Lugar de residencia" maxlength="45">
+						</div>
+                        <div class="grupo">
+							<label for="FechaNacimiento">Fecha de nacimiento :</label><br>
+							<input required="" placeholder="Fecha de nacimiento" type="date" name="FechaNacimiento" maxlength="20">
+						</div>
+						<div class="grupo">
+							<label for="email">Email :</label><br>
+							<input placeholder="E-mail" type="text" name="email" maxlength="120">
+						</div>
+                        <div class="grupo">
+							<label for="telefono">Telefono :</label><br>
+							<input placeholder="Teléfono" type="email" name="telefono" maxlength="20">
+						</div>
+                        <div class="grupo">
+							<label for="usuario">Usurario :</label><br>
+							<input placeholder="cree un usuario" type="text" name="usuario" maxlength="20">
+						</div>
+						<div class="grupo">
+							<label for="ccpassword">Contraseña :</label><br>
+							<input required="" placeholder="Contraseña" type="password" name="ccpassword">
+						</div>
+						
+						<br>
+							<input class="btn btn-primary" type="submit" value="Registrarse">
+					</div><br>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+{% endblock %}

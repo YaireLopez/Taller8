@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "es">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        {% block title %}
+
+        {% endblock %}
+        FORMULARIO MVC
+    </title>
+
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+</head>
+
+<body>
+
+
+    <header>
+        <div id="logotipo">
+            <!--logo-->
+            <img src="{% static 'images/logo.png' %}" />
+            <center><h1>FORMULARIO</h1></center>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/inicio">INICIO</a>
+            </li>
+            
+            <li>
+                <a href="/formulario">FORMULARIO</a>
+            </li>
+
+            <li>
+                <a href="/contacto">CONTACTO</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+            <h1 class="title">FORMULARIO MVC</h1>
+            <h1>_________________________________________________</h1>
+            {% block content %}
+                <strong>Contenido del bloque original</strong>
+            {% endblock %}
+        </div>
+        
+    </div>
+    <hr/>
+    <footer>
+        Programación en la web grupo H2
+    </footer>
+</body>
+</html>

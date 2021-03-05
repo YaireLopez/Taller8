@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}INICIO{% endblock %}
+
+{% block content %}
+    <br>
+    <h2>Información sobre el formulario</h2><br>
+    <p>Este formulario está diseñado para guardar información personal 
+    dentro de una base de datos, esto se logra llenando el formulario
+    de registro que encontrará en la pestaña "FORMULARIO". Debe llenar
+    cuidadosamente cada campo, crear un usuario y una contraseña que no 
+    puede olvidar. A continuación encontramos el diagrama relacional de
+    la base de datos del formulario:</p>
+    <br>
+    <br>
+    <center><img src="{% static 'images/diagrama.jpg' %}" /></center>
+{% endblock %}
