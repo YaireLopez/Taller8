@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %} Listado de articulos {% endblock %}
+
+{% block content %}
+
+<h1 class="title">Listado de articulos</h1>
+    <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Documento</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+        {% for usuario in usuarios %}
+            <tr>
+                <th scope="row">{{usuario.id}}</th>
+                <td>{{usuario.nombres}}</td>
+                <td>{{usuario.apellidos}}</td>
+                <td>@{{usuario.documento}}</td>
+                <td>{{usuario.fechanacimiento}}</td>
+                <td>{{usuario.email}}</td>
+                <td>{{usuario.telefono}}</td>
+                <td>{{usuario.usuario}}</td>
+                <td><a href="{% url 'borrar' id=usuario.id %}">Eliminar</a></td>
+            </tr>
+        {% endfor %}
+      
+    
+{% endblock %}

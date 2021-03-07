@@ -23,5 +23,11 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('formulario/', views.formulario, name="formulario"),
     path('contacto/', views.contacto, name="contacto"),
-    path('crear-usuario/', views.crear_usuario, name="crear_usuario")
+    path('crear-usuario/<str:nombres>/<str:apellidos>/<str:documento>/<str:fechanacimiento>/<str:email>/<str:telefono>/<str:usuario>/<str:contraseña>/', views.crear_usuario, name="crear_usuario"),
+    path('usuario/', views.usuario, name="usuario"),
+    path('editar-usuario/<int:id>', views.editar_usuario),
+    path('usuarios/', views.usuarios, name="usuarios"),
+    path('borrar-usuario/<int:id>', views.borrar_usuario, name = "borrar"),
+    path('create-full-usuario/', views.create_full_usuario, name="create_full")
+
 ]

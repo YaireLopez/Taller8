@@ -2,15 +2,15 @@ from django.db import models
 
 # Create your models here.
 
-class Persona(models.Model):
+
+class Usuario(models.Model):
     nombres = models.CharField(max_length=30)
     apellidos = models.CharField(max_length=50)
-    documento = models.CharField(max_length=15)
-    fechanacimiento =  models.DateField
+    documento = models.CharField(max_length=20)
+    fechanacimiento = models.DateTimeField
     email = models.EmailField(max_length=50)
     telefono = models.CharField(max_length=15)
     usuario = models.CharField(max_length=15)
-    contraseña = models.CharField(max_length=15)
 
 class TipoDocumento(models.Model):
     nombre= models.CharField(max_length=30)

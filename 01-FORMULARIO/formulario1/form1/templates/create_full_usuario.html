@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+
+{% block title %} Llene aquí su fomrulario {% endblock %}
+
+{% block content %}
+
+<h2 class="title">Llene aquí su formulario de registro</h2>
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+
+    {{ form }}
+    <br/>
+    <input type="submit" value="Guardar" />
+ 
+</form>
+{% endblock %}
